@@ -10,6 +10,10 @@
         <style>
             div#id-div{
                 background-color:yellow;
+            } 
+
+            li.my-list{
+                background-color:orange;
             }
         </style>
     </head>
@@ -39,8 +43,29 @@
 }</code></pre>
 
 
+
             <p>Here's what it looks like:</p>
             <div id="id-div">Inside my-div</div>
+        </fieldset>
+        <fieldset>
+            <legend><a id="class">class</a></legend>
+            <p> Classes can be applied to more than item on a page.</p>
+            <p>Here's how we hook class attribute to an element:</p>
+            <pre><code>class="my-list"</code></pre>
+            <p>Here's how the CSS is applied to the element:</p>
+            <pre><code>li.my-list{
+    background-color:orange;
+}</code></pre>
+
+
+            <p>Here's what it looks like:</p>
+            <div>
+                <ul>
+                    <li class="my-list">I'm inside an li with a class of my-list</li>
+                    <li class="my-list">I'm inside an li with a class of my-list</li>
+                    <li class="my-list">I'm inside an li with a class of my-list</li>
+                </ul>
+            </div>
         </fieldset>
 
         <footer class="page-footer">
