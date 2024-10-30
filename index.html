@@ -15,6 +15,15 @@
             li.my-list{
                 background-color:orange;
             }
+
+            li.new-list,div#new-div{
+                background-color:blue;
+            }
+            
+            div.grandkids li{
+                background-color:red;
+            }
+            
         </style>
     </head>
     <body>
@@ -27,6 +36,7 @@
                 <li><a href="#id">id</a></li>
                 <li><a href="#class">class</a></li>
                 <li><a href="#compound">compound</a></li>
+                <li><a href="#descendant">descendant</a></li>
             </ul>
         </nav> 
     </header>           
@@ -47,6 +57,7 @@
             <p>Here's what it looks like:</p>
             <div id="id-div">Inside my-div</div>
         </fieldset>
+
         <fieldset>
             <legend><a id="class">class</a></legend>
             <p> Classes can be applied to more than item on a page.</p>
@@ -64,6 +75,44 @@
                     <li class="my-list">I'm inside an li with a class of my-list</li>
                     <li class="my-list">I'm inside an li with a class of my-list</li>
                     <li class="my-list">I'm inside an li with a class of my-list</li>
+                </ul>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend><a id="compound">compound</a></legend>
+            <p> Compound</p>
+            <p>Here's how the CSS is applied to the elements:</p>
+            <pre><code> li.new-list,div#new-div{
+    background-color:blue;
+}</code></pre>
+
+            <p>Here's what it looks like:</p>
+            <div id="new-list">Inside my-div</div>
+                <ul>
+                    <li class="new-list">I'm inside an li with a class of my-list</li>
+                    <li class="new-list">I'm inside an li with a class of my-list</li>
+                    <li class="new-list">I'm inside an li with a class of my-list</li>
+                </ul>
+            </div> 
+            
+            <div id="new-div">Inside my-div</div>
+        </fieldset>
+
+        <fieldset>
+            <legend><a id="descendant">descendant</a></legend>
+            <p> descendant selector let us access elements at any depth within the current element</p>
+            <p>Here's how the CSS is applied to the elements:</p>
+            <pre><code> li.new-list,div#new-div{
+    background-color:red;
+}</code></pre>
+
+            <p>Here's what it looks like:</p>
+            <div class ="grandkids">
+                <ul>
+                    <li>Im in an li  inside the grandkids div</li>
+                    <li>Im in an li  inside the grandkids div</li>
+                    <li>Im in an li  inside the grandkids div</li>
                 </ul>
             </div>
         </fieldset>
